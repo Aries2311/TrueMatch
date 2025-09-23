@@ -21,18 +21,23 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
 }
+body {
+  margin: 0;
+  color: var(--text);
+  background: url('assets/images/A_digital_abstract_gradient_background_features_a_.png') no-repeat center center fixed;
+  background-size: cover;
+  font: 400 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+}
+
 
 *{ box-sizing: border-box; }
 html, body{ height:100%; }
 html{ -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body{
-  margin:0;
-  color:var(--text);
-  background: radial-gradient(1200px 600px at 10% -10%, #112 0%, #0B0C10 60%) no-repeat, var(--bg);
-  font: 400 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  padding-left: var(--safe-left); padding-right: var(--safe-right);
-}
+
 
 a, button { -webkit-tap-highlight-color: transparent; }
 
