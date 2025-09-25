@@ -303,3 +303,60 @@ section, .section, #cta { scroll-margin-top: 84px; }
     height: 2px !important; /* Make the bars thinner */
   }
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #2a2a2a;
+}
+
+.footer__nav a:hover {
+  color: #64E9EE;
+}
+.section {
+  padding: 60px 20px; /* Adjust padding to create more space */
+}
+@media (max-width: 768px) {
+  .hero__copy h1 {
+    font-size: 2rem; /* Reduce font size on mobile */
+  }
+
+  .hero__cta {
+    flex-direction: column; /* Stack the buttons on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .nav__toggle {
+    position: absolute;
+    top: 15px;   /* Position the toggle at the top */
+    right: 20px; /* Position the toggle at the right */
+    z-index: 1000;  /* Ensure the button appears on top */
+  }
+}
+
+@keyframes gradientAnimation {
+  50% { background: linear-gradient(to right, #c000c7, #feb47b); }
+  50% { background: linear-gradient(to right, #6a11cb, #2575fc); }
+  100% { background: linear-gradient(to right, #003c96, #feb47b); }
+}
+
+body {
+  animation: gradientAnimation 15s ease infinite;
+  background-size: 400% 400%; 
+}
+@keyframes floatEffect {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.floating-element {
+  animation: floatEffect 3s ease-in-out infinite;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #64E9EE;
+  border-radius: 50%;
+}
