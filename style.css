@@ -335,9 +335,9 @@ section, .section, #cta { scroll-margin-top: 84px; }
 }
 
 @keyframes gradientAnimation {
-  50% { background: linear-gradient(to right, #c000c7, #feb47b); }
+  50% { background: linear-gradient(to right, #c000c7, #11005c); }
   50% { background: linear-gradient(to right, #6a11cb, #2575fc); }
-  100% { background: linear-gradient(to right, #003c96, #feb47b); }
+  50% { background: linear-gradient(to right, #003c96, #00a380); }
 }
 
 body {
