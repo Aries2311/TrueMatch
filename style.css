@@ -21,6 +21,7 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
 }
+
 body {
   margin: 0;
   color: var(--text);
@@ -33,11 +34,9 @@ body {
   padding-right: var(--safe-right);
 }
 
-
 *{ box-sizing: border-box; }
 html, body{ height:100%; }
 html{ -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-
 
 a, button { -webkit-tap-highlight-color: transparent; }
 
@@ -272,4 +271,35 @@ section, .section, #cta { scroll-margin-top: 84px; }
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .btn:hover, .nav__menu a:hover, .card:hover, .carousel__btn:hover, .carousel__dot:hover { transform:none !important; box-shadow:none !important; }
+}
+
+
+/* For mobile view, align the hamburger menu button to the right and make it smaller */
+@media (max-width: 768px) {
+  .nav__toggle {
+    position: absolute !important;
+    right: 10px !important;  /* Move it closer to the right side */
+    top: 20px !important;    /* Adjust top position to avoid overlap with logo */
+    width: 30px !important;  /* Make the button smaller */
+    height: 25px !important; /* Adjust button height */
+  }
+
+  /* Optional: Make the individual bars smaller */
+  .nav__bar {
+    width: 25px !important; /* Make the bars shorter */
+    height: 3px !important; /* Make the bars thinner */
+  }
+}
+
+/* For very small screens (like on mobile phones), adjust even further */
+@media (max-width: 480px) {
+  .nav__toggle {
+    width: 28px !important; /* Even smaller for very small screens */
+    height: 22px !important; /* Adjust button size */
+  }
+
+  .nav__bar {
+    width: 22px !important; /* Make the bars a bit shorter for small screens */
+    height: 2px !important; /* Make the bars thinner */
+  }
 }
